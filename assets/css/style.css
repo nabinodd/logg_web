@@ -1,0 +1,18 @@
+.wrapper>div {
+    background: #eee;
+    padding: 3em
+}
+
+.wrapper>div:nth-child(odd) {
+    background: #ddd;
+
+}
+
+.tablee{
+    table-layout: auto;
+}
+/* 
+.wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+} */

@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{%static '/css/style.css' %}" />
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            <form action="" method="post">
+                {% csrf_token %}
+                <table>
+                    {{form.as_table}}
+                </table>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+
+        <div class="tablee">
+            <h2>All User Details</h2>
+            <table>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><b>Address</b></td>
+                    <td><b>Institution</b></td>
+                    <td><b>Phone</b></td>
+                    <td><b>Remarks</b></td>
+                    <td><b>Date</b></td>
+                    <td><b>Chk-In-Time</b></td>
+                    <td><b>Chk-Out-Time</b></td>
+                    <td><b>Image Name</b></td>
+                </tr>
+                {% for item in data %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.addr }}</td>
+                    <td>{{ item.instu }}</td>
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.remarks }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.chk_in_time }}</td>
+                    <td>{{ item.chk_out_time }}</td>
+                    <td>{{ item.img_name }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="divider">
+                        <hr />
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</html>
