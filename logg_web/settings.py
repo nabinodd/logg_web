@@ -25,7 +25,7 @@ SECRET_KEY = 'a5cd7b63a2244e5bde86c3633b962747397633286663bf6f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://nabinodd.pythonanywhere.com/','localhost']
+ALLOWED_HOSTS = ['nabinodd.pythonanywhere.com','localhost']
 
 
 # Application definition
